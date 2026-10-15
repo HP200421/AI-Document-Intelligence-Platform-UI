@@ -11,8 +11,7 @@ function Error() {
           Page not found
         </h4>
         <div className="text-white text-base font-normal mb-10">
-          The page you are looking for might have been removed had its name
-          changed or is temporarily unavailable.
+          The page you are looking for might have been removed or is temporarily unavailable.
         </div>
       </div>
       <div className="max-w-[300px] mx-auto w-full">
