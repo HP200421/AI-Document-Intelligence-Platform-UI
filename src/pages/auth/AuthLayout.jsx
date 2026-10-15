@@ -5,14 +5,14 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
   const year = new Date().getFullYear();
 
   return (
-    <main className="min-h-screen bg-[#f7f8fa] text-slate-900 lg:grid lg:grid-cols-[1.05fr_0.95fr]">
-      <section className="relative hidden min-h-screen overflow-hidden bg-[#101a2d] px-12 py-10 text-white lg:flex lg:flex-col lg:justify-between xl:px-16 xl:py-12">
-        <div className="pointer-events-none absolute -left-32 -top-36 h-[30rem] w-[30rem] rounded-full bg-indigo-500/20 blur-[100px]" />
-        <div className="pointer-events-none absolute -bottom-44 -right-24 h-[32rem] w-[32rem] rounded-full bg-cyan-400/10 blur-[110px]" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_28%,rgba(255,255,255,0.08),transparent_25%),linear-gradient(135deg,transparent_55%,rgba(99,102,241,0.12))]" />
+    <main className="min-h-screen bg-[#f8f5ef] text-[#292723] lg:grid lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="relative hidden min-h-screen overflow-hidden bg-[#292723] px-12 py-10 text-white lg:flex lg:flex-col lg:justify-between xl:px-16 xl:py-12">
+        <div className="pointer-events-none absolute -left-32 -top-36 h-[30rem] w-[30rem] rounded-full bg-[#c06a48]/20 blur-[100px]" />
+        <div className="pointer-events-none absolute -bottom-44 -right-24 h-[32rem] w-[32rem] rounded-full bg-[#e4bca4]/10 blur-[110px]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_28%,rgba(255,255,255,0.08),transparent_25%),linear-gradient(135deg,transparent_55%,rgba(192,106,72,0.12))]" />
 
         <div className="relative z-10 flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white text-sm font-bold tracking-tight text-[#101a2d] shadow-lg shadow-black/20">
+          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#d97757] text-sm font-bold tracking-tight text-white shadow-lg shadow-black/20">
             AI
           </span>
           <span className="text-sm font-semibold tracking-wide text-white/90">
@@ -21,13 +21,13 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-xl py-16">
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3.5 py-2 text-xs font-medium tracking-wide text-indigo-100">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)]" />
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3.5 py-2 text-xs font-medium tracking-wide text-[#f4d4c5]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#e7a180] shadow-[0_0_12px_rgba(231,161,128,0.8)]" />
             YOUR KNOWLEDGE, UNLOCKED
           </div>
           <h1 className="max-w-lg text-5xl font-semibold leading-[1.08] tracking-[-0.045em] xl:text-6xl">
             Every document has{" "}
-            <span className="bg-gradient-to-r from-indigo-200 via-sky-200 to-cyan-200 bg-clip-text text-transparent">
+            <span className="relative inline-block bg-gradient-to-r from-[#f0c7ae] via-[#e7a180] to-[#d97757] bg-clip-text font-serif italic text-transparent after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:rounded-full after:bg-gradient-to-r after:from-[#d97757]/0 after:via-[#d97757]/80 after:to-[#d97757]/0">
               more to say.
             </span>
           </h1>
@@ -39,7 +39,7 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
           <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-2xl shadow-black/20 backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-xl bg-indigo-400/15 text-indigo-200">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#d97757]/15 text-[#f0c7ae]">
                   <Icon icon="heroicons-outline:document-text" />
                 </span>
                 <div>
@@ -52,7 +52,7 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
               </span>
             </div>
             <div className="mt-4 flex gap-3">
-              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cyan-300/15 text-xs font-semibold text-cyan-100">
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#d97757]/20 text-xs font-semibold text-[#f0c7ae]">
                 AI
               </span>
               <div className="rounded-2xl rounded-tl-md bg-white/[0.08] px-4 py-3">
@@ -65,7 +65,7 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
             <div className="mt-4 flex items-center gap-2 rounded-xl border border-white/10 bg-[#0c1423]/70 px-3.5 py-3 text-xs text-slate-400">
               <Icon icon="heroicons-outline:sparkles" />
               <span>What are the key takeaways?</span>
-              <span className="ml-auto grid h-7 w-7 place-items-center rounded-lg bg-indigo-400 text-white">
+              <span className="ml-auto grid h-7 w-7 place-items-center rounded-lg bg-[#d97757] text-white">
                 <Icon icon="heroicons-outline:arrow-up" />
               </span>
             </div>
@@ -90,7 +90,7 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
 
       <section className="flex min-h-screen flex-col px-5 py-7 sm:px-10 sm:py-10 lg:px-12 xl:px-20">
         <div className="flex items-center gap-3 lg:hidden">
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[#101a2d] text-sm font-bold text-white">
+          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[#d97757] text-sm font-bold text-white">
             AI
           </span>
           <span className="text-sm font-semibold text-slate-800">
@@ -100,10 +100,10 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
 
         <div className="my-auto flex w-full justify-center py-12 lg:py-16">
           <div className="w-full max-w-[430px]">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-600">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary-700">
               {eyebrow}
             </p>
-            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-slate-900 sm:text-[2.15rem]">
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[#292723] sm:text-[2.15rem]">
               {title}
             </h2>
             <p className="mt-2.5 text-sm leading-6 text-slate-500">
@@ -111,7 +111,7 @@ const AuthLayout = ({ eyebrow, title, description, children, footer }) => {
             </p>
             <div className="mt-8">{children}</div>
             {footer && (
-              <div className="mt-7 border-t border-slate-200 pt-6 text-sm text-slate-500">
+              <div className="mt-7 border-t border-[#e8e1d7] pt-6 text-sm text-slate-500">
                 {footer}
               </div>
             )}

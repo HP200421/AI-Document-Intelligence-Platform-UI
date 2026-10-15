@@ -25,7 +25,7 @@ const Login = () => {
             New to the platform?{" "}
             <Link
               to="/register"
-              className="font-semibold text-indigo-700 transition hover:text-indigo-500"
+              className="font-semibold text-primary-700 transition hover:text-primary-500"
             >
               Create an account
             </Link>

@@ -4,14 +4,14 @@ import { Menu } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { axiosFireApi, setAccessToken } from "../../../../services/config";
-import { handleLogout } from "@/pages/auth/common/store";
+import { getUserDisplayName, handleLogout } from "@/pages/auth/common/store";
 import { toast } from "react-toastify";
 
 const Profile = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  const displayName = user?.name || "Account";
+  const displayName = getUserDisplayName(user);
 
   const logout = async () => {
     await axiosFireApi("logout", "post");
@@ -26,7 +26,7 @@ const Profile = () => {
     return (
       <div className="flex items-center">
         <div className="flex-1 ltr:mr-[10px] rtl:ml-[10px]">
-          <div className="lg:h-8 lg:w-8 h-7 w-7 rounded-full bg-slate-900 text-white grid place-items-center text-xs font-medium">
+          <div className="lg:h-8 lg:w-8 h-7 w-7 rounded-full bg-primary-600 text-white grid place-items-center text-xs font-medium">
             {initial}
           </div>
         </div>

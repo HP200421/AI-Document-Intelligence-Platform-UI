@@ -1,20 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useWidth from "@/hooks/useWidth";
-import useDarkMode from "@/hooks/useDarkMode";
 
 const Logo = () => {
   const { width, breakpoints } = useWidth();
-  const [isDark] = useDarkMode();
-
   if (width >= breakpoints.xl) return null;
 
   return (
     <Link to="/home" className="inline-flex items-center gap-2">
       <span
-        className={`h-8 w-8 rounded-xl grid place-items-center text-xs font-semibold ${
-          isDark ? "bg-white text-slate-900" : "bg-slate-900 text-white"
-        }`}
+        className="grid h-8 w-8 place-items-center rounded-xl bg-primary-600 text-xs font-semibold text-white dark:bg-primary-500"
       >
         AI
       </span>

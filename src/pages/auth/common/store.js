@@ -14,15 +14,43 @@ const initialState = {
   loading: false,
 };
 
+const nameFromEmail = (email) => {
+  const localPart = email?.split("@")[0];
+  if (!localPart) return "";
+
+  return localPart
+    .replace(/[._-]+/g, " ")
+    .replace(/\b\w/g, (character) => character.toUpperCase());
+};
+
+export const getUserDisplayName = (user) => {
+  if (user?.name && user.name !== "User" && user.name !== "Account") {
+    return user.name;
+  }
+
+  return nameFromEmail(user?.email) || "Account";
+};
+
 const normalizeUser = (payload) => {
-  if (!payload) return { name: "User", email: "" };
+  if (!payload) return { name: "Account", email: "" };
   if (typeof payload === "string") return { name: payload, email: "" };
 
-  const nested = payload.user && typeof payload.user === "object" ? payload.user : payload;
+  const nested =
+    payload.user && typeof payload.user === "object"
+      ? payload.user
+      : payload.data && typeof payload.data === "object"
+        ? payload.data
+        : payload;
+  const email = nested.email || payload.email || "";
 
   return {
-    name: nested.name || nested.email || "User",
-    email: nested.email || "",
+    name:
+      nested.name ||
+      nested.full_name ||
+      payload.name ||
+      nameFromEmail(email) ||
+      "Account",
+    email,
   };
 };
 

@@ -72,7 +72,7 @@ const RegForm = () => {
         register={register}
         error={errors.name}
         classLabel="mb-2 block text-sm font-medium normal-case text-slate-700"
-        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-indigo-400 focus:!ring-4 focus:!ring-indigo-100"
+        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-primary-400 focus:!ring-4 focus:!ring-primary-100"
       />
       <Textinput
         name="email"
@@ -84,7 +84,7 @@ const RegForm = () => {
         register={register}
         error={errors.email}
         classLabel="mb-2 block text-sm font-medium normal-case text-slate-700"
-        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-indigo-400 focus:!ring-4 focus:!ring-indigo-100"
+        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-primary-400 focus:!ring-4 focus:!ring-primary-100"
       />
       <Textinput
         name="password"
@@ -97,7 +97,7 @@ const RegForm = () => {
         error={errors.password}
         hasicon
         classLabel="mb-2 block text-sm font-medium normal-case text-slate-700"
-        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-indigo-400 focus:!ring-4 focus:!ring-indigo-100"
+        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-primary-400 focus:!ring-4 focus:!ring-primary-100"
       />
       <Textinput
         name="confirmpassword"
@@ -110,11 +110,11 @@ const RegForm = () => {
         error={errors.confirmpassword}
         hasicon
         classLabel="mb-2 block text-sm font-medium normal-case text-slate-700"
-        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-indigo-400 focus:!ring-4 focus:!ring-indigo-100"
+        className="!h-12 !rounded-xl !border-slate-200 !bg-white !px-4 !text-sm !shadow-sm focus:!border-primary-400 focus:!ring-4 focus:!ring-primary-100"
       />
       <button
         type="submit"
-        className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#18243a] px-4 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition duration-200 hover:-translate-y-0.5 hover:bg-indigo-700 hover:shadow-indigo-900/15 focus:outline-none focus:ring-4 focus:ring-indigo-200 disabled:translate-y-0 disabled:cursor-not-allowed disabled:opacity-65"
+        className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#292723] px-4 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition duration-200 hover:-translate-y-0.5 hover:bg-primary-700 hover:shadow-primary-900/15 focus:outline-none focus:ring-4 focus:ring-primary-200 disabled:translate-y-0 disabled:cursor-not-allowed disabled:opacity-65"
         disabled={loading}
         aria-busy={loading}
       >

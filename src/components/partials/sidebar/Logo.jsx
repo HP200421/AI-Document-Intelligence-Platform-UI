@@ -20,7 +20,7 @@ const SidebarLogo = ({ menuHover }) => {
     >
       <Link to="/home">
         <div className="flex items-center space-x-3">
-          <div className="h-9 w-9 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 grid place-items-center text-xs font-semibold">
+          <div className="h-9 w-9 rounded-xl bg-primary-600 dark:bg-primary-500 text-white grid place-items-center text-xs font-semibold">
             AI
           </div>
 
